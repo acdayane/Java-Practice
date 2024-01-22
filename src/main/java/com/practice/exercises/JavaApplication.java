@@ -11,10 +11,14 @@ public class JavaApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(JavaApplication.class, args);		
       
-		//whatIsThisNumber();
-		//fibonacci();
-		//multiplication();
+		whatIsThisNumber();
+		fibonacci();
+		multiplication();
 		pyramid();
+		checkArray();
+
+		Holidayzer holidayzer = new Holidayzer();
+		holidayzer.getHoliday("12-02-2024");
 
 	}
 
@@ -52,15 +56,14 @@ public class JavaApplication {
 			System.out.print(sum + " ");
 
 			if (sum == 0) {
-				num1 = 1;
+				num2 = 1;
 			} 
 			else {
-				// num2 = num1;
-				// num1 = sum;
-				num1 = num2;
-				num2 = sum;
+				num2 = num1;
+				num1 = sum;
 			}
 		}
+		System.out.println("");
 	}
 
 	public static void multiplication() {
@@ -86,5 +89,22 @@ public class JavaApplication {
 				System.out.print(i);
 			}
 		}
+		System.out.println("");
 	}
+
+	public static void checkArray() {
+		String[] array1 = {"Morango", "Banana", "Maçã", "Uva", "Caqui"};
+		String[] array2 = {"Manga", "Caqui", "Morango", "Amora"};
+
+		System.out.println("Quais são as frutas presentes nos dois arrays?");
+
+		for (int i=0; i<array1.length; i++) {
+			for (int j=0; j<array2.length; j++) {
+				if (array1[i] == array2[j]) {
+					System.out.println(array1[i]);
+				}
+			}
+		}
+	}
+
 }
