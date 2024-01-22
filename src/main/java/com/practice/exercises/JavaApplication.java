@@ -12,7 +12,9 @@ public class JavaApplication {
 		SpringApplication.run(JavaApplication.class, args);		
       
 		//whatIsThisNumber();
-		fibonacci();
+		//fibonacci();
+		//multiplication();
+		pyramid();
 
 	}
 
@@ -57,6 +59,31 @@ public class JavaApplication {
 				// num1 = sum;
 				num1 = num2;
 				num2 = sum;
+			}
+		}
+	}
+
+	public static void multiplication() {
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Você quer ver a tabuada de que número? ");        
+        Integer num = scanner.nextInt();
+
+		System.out.println("Tabela de multiplicação do " + num);
+
+		for (int i=0; i<=10; i++) {
+			System.out.println(num + " x " + i + " = " + num*i);
+		}
+	}
+
+	public static void pyramid() {
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Quantas linhas você quer na pirâmide de números? ");
+		Integer num = scanner.nextInt();
+
+		for (int i=1; i<=num; i++) {
+			System.out.println("");
+			for (int j=1; j<=i; j++) {
+				System.out.print(i);
 			}
 		}
 	}
