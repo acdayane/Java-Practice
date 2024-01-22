@@ -17,14 +17,20 @@ public class Holidayzer {
         {"25-12-2024", "Natal"}
     };
 
-    public void getHoliday(String date) {
+    public String getHoliday(String date) {
         for (int i=0; i<holidaysList.length; i++) {
             if (holidaysList[i][0].equals(date)) {
-                System.out.println(date + " é feriado de " + holidaysList[i][1]);
-                return;
+                return date + " é feriado de " + holidaysList[i][1];
             }
         }
-        System.out.println("Não é feriado!");
+        return "Não é feriado!";
+    }
+
+    public String getAllHolidays() {
+        for (String[] holiday : holidaysList) {  
+            return holiday[0] + " é feriado de " + holidaysList[1];            
+        }
+        return null;
     }
     
 }
