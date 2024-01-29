@@ -20,6 +20,7 @@ public class Holidayzer {
     public String getHoliday(String date) {
         for (int i=0; i<holidaysList.length; i++) {
             if (holidaysList[i][0].equals(date)) {
+                System.out.println(date + " é feriado de " + holidaysList[i][1]);
                 return date + " é feriado de " + holidaysList[i][1];
             }
         }
@@ -28,6 +29,7 @@ public class Holidayzer {
 
     public String getAllHolidays() {
         for (String[] holiday : holidaysList) {  
+            System.out.println(holiday[0] + " é feriado de " + holidaysList[1]);
             return holiday[0] + " é feriado de " + holidaysList[1];            
         }
         return null;
